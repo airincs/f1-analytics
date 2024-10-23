@@ -15,4 +15,4 @@ select
     statusid as status_id,
     time
 
-from formula1.raw.raw_sprint_results
+from {{source('raw_data','raw_sprint_results')}}

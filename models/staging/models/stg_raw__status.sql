@@ -2,4 +2,4 @@ select
     status,
     statusid as status_id
 
-from formula1.raw.raw_status
+from {{source('raw_data','raw_status')}}

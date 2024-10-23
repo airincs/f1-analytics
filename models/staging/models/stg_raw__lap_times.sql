@@ -6,4 +6,4 @@ select
     raceid as race_id,
     time
 
-from formula1.raw.raw_lap_times
+from {{source('raw_data','raw_lap_times')}}

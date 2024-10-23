@@ -4,4 +4,4 @@ select
     constructorref as constructor_ref,
     nationality
 
-from formula1.raw.raw_constructors
+from {{source('raw_data','raw_constructors')}}

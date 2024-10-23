@@ -4,4 +4,4 @@ select
     constructorid as constructor_id,
     cast(points as int) as points
 
-from formula1.raw.raw_constructor_results
+from {{source('raw_data','raw_constructor_results')}}

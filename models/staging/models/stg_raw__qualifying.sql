@@ -9,4 +9,4 @@ select
     qualifyid as qualify_id,
     raceid as race_id
 
-from formula1.raw.raw_qualifying
+from {{source('raw_data','raw_qualifying')}}

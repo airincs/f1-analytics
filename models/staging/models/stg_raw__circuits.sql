@@ -7,4 +7,4 @@ select
     latitude,
     longitude
 
-from formula1.raw.raw_circuits
+from {{source('raw_data','raw_circuits')}}

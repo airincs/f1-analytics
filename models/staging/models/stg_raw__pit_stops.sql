@@ -7,4 +7,4 @@ select
     stop,
     time
 
-from formula1.raw.raw_pit_stops
+from {{source('raw_data','raw_pit_stops')}}

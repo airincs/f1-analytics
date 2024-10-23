@@ -9,4 +9,4 @@ select
     surname,
     url
 
-from formula1.raw.raw_drivers
+from {{source('raw_data','raw_drivers')}}

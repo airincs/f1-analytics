@@ -6,4 +6,4 @@ select
     raceid as  race_id,
     wins
 
-from formula1.raw.raw_constructor_standings
+from {{source('raw_data','raw_constructor_standings')}}
