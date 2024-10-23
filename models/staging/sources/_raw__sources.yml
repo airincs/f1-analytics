@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: formula1 
+    description: This is the Snowflake database that contains our raw Formula 1 data
+    schema: raw
+    tables:
+      - name: raw_circuits
+        description: >
+          Contains information about circuit locations
+        columns:
+          - name: circuitid
+            description: Primary key of the raw_circuits table
+            tests:
+              - unique
+              - not_null
