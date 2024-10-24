@@ -44,3 +44,5 @@ models:
     intermediate:
       +materialized: table
       +schema: INTERMEDIATE
+    seeds:
+      +schema: seed_data
