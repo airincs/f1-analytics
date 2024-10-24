@@ -46,3 +46,6 @@ models:
       +schema: INTERMEDIATE
     seeds:
       +schema: seed_data
+    marts:
+      +materialized: table
+      +schema: MARTS
