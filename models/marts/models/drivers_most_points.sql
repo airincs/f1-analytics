@@ -1,2 +1,2 @@
 select *
-from {{ ref('int_driver_points') }}
+from {{ ref('int_drivers_most_points') }}
