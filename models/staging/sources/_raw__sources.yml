@@ -1,0 +1,134 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: formula1 
+    description: This is the Snowflake database that contains our raw Formula 1 data
+    schema: raw
+    tables:
+      - name: raw_circuits
+        description: >
+          Contains information about circuit locations
+        columns:
+          - name: circuitid
+            description: Primary key of the raw_circuits table
+            tests:
+              - unique
+              - not_null
+      - name: raw_constructors
+        description: >
+          Contains information about constructors
+        columns:
+          - name: constructorid
+            description: Primary key of the raw_constructors table
+            tests:
+              - unique
+              - not_null
+      - name: raw_constructor_results
+        description: >
+          Contains information about race results from a constructor point of view
+        columns:
+          - name: constructorid
+            description: Primary key of the raw_constructors_results table
+            tests:
+              - not_null
+      - name: raw_constructor_standings
+        description: >
+          Contains information about constructors after each race
+        columns:
+          - name: constructorstandingsid
+            description: Primary key of the raw_constructors_standings table
+            tests:
+              - unique
+              - not_null
+      - name: raw_drivers
+        description: >
+          Contains information about drivers
+        columns:
+          - name: driverid
+            description: Primary key of the raw_drivers table
+            tests:
+              - unique
+              - not_null
+      - name: raw_driver_standings
+        description: >
+          Contains information about drivers after each race
+        columns:
+          - name: driverstandingsid
+            description: Primary key of the raw_drivers_standings table
+            tests:
+              - unique
+              - not_null
+      - name: raw_lap_times
+        description: >
+          Contains information about all lap times for each driver for each race
+        columns:
+          - name: driverid
+            description: Links to drivers
+            tests:
+              - not_null
+      - name: raw_pit_stops
+        description: >
+          Contains information about all pit stops
+        columns:
+          - name: driverid
+            description: Links to drivers
+            tests:
+              - not_null
+      - name: raw_qualifying
+        description: >
+          Contains information about qualifying results
+        columns:
+          - name: qualifyid
+            description: Primary key of the raw_qualifying table
+            tests:
+              - unique
+              - not_null
+      - name: raw_races
+        description: >
+          Contains information about each race
+        columns:
+          - name: raceid
+            description: Primary key of the raw_races table
+            tests:
+              - unique
+              - not_null
+      - name: raw_results
+        description: >
+          Contains information about all race results
+        columns:
+          - name: resultid
+            description: Primary key of the raw_results table
+            tests:
+              - unique
+              - not_null
+      - name: raw_seasons
+        description: >
+          Contains URL links to the wikipedia pages for each year
+        columns:
+          - name: year
+            description: year of the season
+            tests:
+              - not_null
+      - name: raw_sprint_results
+        description: >
+          Contains information about sprint races
+        columns:
+          - name: driverid
+            description: Links to drivers table
+            tests:
+              - not_null
+      - name: raw_status
+        description: >
+          Contains status information
+        columns:
+          - name: statusid
+            description: Primary key of the raw_status table
+            tests:
+              - unique
+              - not_null
+
+
+
+
+
