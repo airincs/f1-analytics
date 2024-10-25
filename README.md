@@ -19,7 +19,7 @@ Formula 1 Data: https://www.kaggle.com/datasets/rohanrao/formula-1-world-champio
 
 ### Ingestion into Snowflake
 The raw data from Kaggle is ingested into Snowflake. A 'raw' database is used to signify that the data is unedited.
-IMAGE 1
+![alt text](https://https://github.com/airincs/f1-analytics/blob/main/Images/1.png)
 
 ### dbt Cloud Initialization + Snowflake Connection
 For this project I used dbt Cloud to keep things simple; however, I have used dbt Core previously as well. At this stage, I initialized the dbt project and connected to the Snowflake account. 
